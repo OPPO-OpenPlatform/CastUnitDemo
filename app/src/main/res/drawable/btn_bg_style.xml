@@ -1,0 +1,24 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--简单版仅颜色，直接设置android:radius="8dp"无效-->
+    <!--未点击显示颜色-->
+    <item android:drawable="@color/color_FF773D" android:state_pressed="false" />
+    <!--点击显示颜色-->
+    <item android:drawable="@color/color_188FFF" android:state_pressed="true" />
+
+    <!--复杂版带圆角-->
+    <!--未点击显示颜色-->
+    <item android:state_pressed="false">
+        <shape>
+            <solid  android:color="@color/color_FF773D" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!--点击显示颜色-->
+    <item android:state_pressed="true">
+        <shape>
+            <solid  android:color="@color/color_188FFF" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>

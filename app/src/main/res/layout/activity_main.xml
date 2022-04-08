@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <Button
+                android:id="@+id/tv_play"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:contentDescription="play"
+                android:text="play"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_pause"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/tv_pause"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:contentDescription="pause"
+                android:text="pause"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toRightOf="@id/tv_play"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/tv_disconnect"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="disconnect"
+                android:text="disconnect"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_play" />
+
+            <Button
+                android:id="@+id/tv_volume_add"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="音量加"
+                android:text="音量加"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_volume_sub"
+                app:layout_constraintTop_toBottomOf="@id/tv_disconnect" />
+
+            <Button
+                android:id="@+id/tv_volume_sub"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="音量减"
+                android:text="音量减"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toRightOf="@id/tv_volume_add"
+                app:layout_constraintRight_toLeftOf="@id/tv_volume_10"
+                app:layout_constraintTop_toBottomOf="@id/tv_disconnect" />
+
+            <Button
+                android:id="@+id/tv_volume_10"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="音量设为10"
+                android:text="音量设为10"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toRightOf="@id/tv_volume_sub"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_disconnect" />
+
+            <Button
+                android:id="@+id/tv_mute"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="静音"
+                android:text="静音"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_un_mute"
+                app:layout_constraintTop_toBottomOf="@id/tv_volume_add" />
+
+            <Button
+                android:id="@+id/tv_un_mute"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="非静音"
+                android:text="非静音"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toRightOf="@id/tv_mute"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_volume_add" />
+
+            <Button
+                android:id="@+id/tv_play_next"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="切换下一个"
+                android:text="切换下一个"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_mute" />
+
+            <Button
+                android:id="@+id/cur_version"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="版本号"
+                android:text="版本号"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/feature_support"
+                app:layout_constraintTop_toBottomOf="@id/tv_play_next" />
+
+            <Button
+                android:id="@+id/feature_support"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="特性支持"
+                android:text="特性支持"
+                android:background="@drawable/btn_bg_style"
+                app:layout_constraintLeft_toRightOf="@id/cur_version"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_play_next" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/connect_state_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Current connect state: false"/>
+
+        <TextView
+            android:id="@+id/cur_version_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Current Version: "/>
+
+        <TextView
+            android:id="@+id/feature_support_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Feature Support: " />
+
+        <TextView
+            android:id="@+id/currentprocess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="currentprocess" />
+
+        <SeekBar
+            android:id="@+id/process"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:progress="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:text="start:0" />
+
+            <TextView
+                android:id="@+id/end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="end" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="volume" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

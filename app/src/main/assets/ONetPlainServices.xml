@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<services>
+    <service
+        name = "com.example.castsdkdemo.MainActivity"
+        type = "oplus.onet.video_relay"
+        status = "ON"
+        urn = "502:com.example.castsdkdemo"
+        accountStrategy="no_account"
+        version = "1.0.0">
+        <protocol name = "ContentProvider">
+            <attributes>
+                <attribute key = "uri" value = "content://com.example.castsdkdemo.provider/cpability" />
+            </attributes>
+        </protocol>
+    </service>
+</services>
